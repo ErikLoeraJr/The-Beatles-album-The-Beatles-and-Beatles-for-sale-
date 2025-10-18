@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Ejercicio 8 The Fab Four</title>
+    <style>
+        .album{
+            background-color: #414141;
+            color: #fff;
+        }
+        h2{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">The Beatles</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BAND</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">TOUR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--Fin de barra de navegacion-->
+
+    <!--Carrusel-->
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/Ejercicio 8/imagenes/abbey_road.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/Ejercicio 8/imagenes/thebeatles_2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/Ejercicio 8/imagenes/thebeatles_1962.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/Ejercicio 8/imagenes/The-Beatles-1.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--Fin del carrusel-->
+
+    <!--Inicio the Fab Four-->
+    <div id="the-fab-four">
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="col-md-12 text-center pt-5">
+                    <img src="imagenes/The-Beatles-Logo.jpg" alt="The Beatles Logo" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center pt-5">
+                    <h1>THE FAB FOUR</h1>
+                </div>
+                <div class="col-md-6 offset-md-3 text-center pt-3">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Dolorem debitis necessitatibus repudiandae eius doloribus.
+                        Dolorem cumque illo fugiat eligendi praesentium! Vitae nesciunt
+                        dolores velit corrupti non consequatur, cum ea atque? Lorem, ipsum
+                        dolor sit amet consectetur adipisicing elit. Repudiandae eligendi
+                        aspernatur aliquam sequi perferendis ullam ut hic quas aperiam optio
+                        quisquam doloremque quis eius distinctio, laudantium commodi dolore
+                        impedit Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Quaerat veritatis, temporibus, omnis doloribus iste similique nisi
+                        sit ex vitae magnam harum quibusdam soluta odit porro eaque ea iure
+                        voluptatum facere?
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 text-center mt-2">
+                    <h2>Jhon Lenon</h2>
+                    <img src="imagenes/john-lennon.jpg" alt="Jhon Lenon" class="rounded-circle" width="70%">
+
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mt-2">
+                    <h2>Paul Mccartney</h2>
+                    <img src="imagenes/paul-mccartney.jpg" alt="Jhon Lenon" class="rounded-circle" width="70%">
+
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mt-2">
+                    <h2>George Harrison</h2>
+                    <img src="imagenes/george-harrison.jpg" alt="Jhon Lenon" class="rounded-circle" width="70%">
+
+                </div>
+                <div class="col-md-3 col-sm-6 text-center mt-2">
+                    <h2>Ringo Star</h2>
+                    <img src="imagenes/ringo-starr.jpg" alt="Jhon Lenon" class="rounded-circle" width="70%">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin the Fab Four-->
+
+    <!--Albums-->
+
+    <div id="albums" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="m-5">ALBUMS</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container album p-5">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h4 class="text-center pb-5">Please Please me</h4>
+                    <ol>
+                        <li>I Saw Her Standing There</li>
+                        <li>And I Love Her</li>
+                        <li>Please Please me</li>
+                        <li>And (Go To Him)</li>
+                        <li>Do You Want Know A Secret</li>
+                    </ol>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <iframe style="width: 90%" height="280" src="https://youtu.be/S302kF8MJ-I?list=RDmwBdWVTR-o8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--Fin de albums-->
+
+    <!--Album2-->
+    
+    <div id="albums" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="m-5">ALBUMS</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container album p-5">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <h4 class="text-center pb-5">Please Please me</h4>
+                    <ol>
+                        <li>Help!!</li>
+                        <li>And I Love Her</li>
+                        <li>Please Please me</li>
+                        <li>And (Go To Him)</li>
+                        <li>Do You Want Know A Secret</li>
+                    </ol>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <iframe style="width: 90%" height="280" src="https://youtu.be/S302kF8MJ-I?list=RDmwBdWVTR-o8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--fin album2-->
+
+    <!--Pie de página-->
+<footer class="bg-dark text-white text-center">
+
+    <div class="container">
+        <img src="/Ejercicio 8/imagenes/abbey_road_street.webp" alt="The Beatles" class="img-fluid mb-3" style="max-height: 100px;">
+    </div>
+ 
+    <div class="container">
+        <h1 class="display-5">The Beatles</h1>
+        <p class="lead">Derechos Reservados - Liverpool</p>
+    </div>
+</footer>
+<!--Fin Pie de página-->
+
+</body>
+
+</html>
