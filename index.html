@@ -10,6 +10,10 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Archivo con datos de álbumes -->
+    <script src="albums.js"></script>
+    
     <title>Ejercicio 8 The Fab Four</title>
     <style>
         .album{
@@ -18,6 +22,19 @@
         }
         h2{
             font-size: 18px;
+        }
+        .song-item {
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .song-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .song-item.active {
+            background-color: rgba(255, 193, 7, 0.3);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -169,28 +186,22 @@
         <div class="container album p-5">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <h4 class="text-center pb-5">Please Please me</h4>
-                    <ol>
-                        <li>I Saw Her Standing There</li>
-                        <li>And I Love Her</li>
-                        <li>Please Please me</li>
-                        <li>And (Go To Him)</li>
-                        <li>Do You Want Know A Secret</li>
+                    <h4 class="text-center pb-5">The Beatles</h4>
+                    <ol id="album1-songs">
+                        <!-- Las canciones se cargarán dinámicamente -->
                     </ol>
                 </div>
 
                 <div class="col-md-6 col-sm-12">
-                    <iframe style="width: 90%" height="280" src="https://youtu.be/S302kF8MJ-I?list=RDmwBdWVTR-o8"
+                    <iframe style="width: 90%" height="280" src=""
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                        allowfullscreen id="video-album1">
                     </iframe>
                 </div>
 
             </div>
         </div>
-
-
     </div>
 
     <!--Fin de albums-->
@@ -198,39 +209,25 @@
     <!--Album2-->
     
     <div id="albums" class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3 class="m-5">ALBUMS</h3>
-                </div>
-            </div>
-        </div>
-
         <div class="container album p-5">
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <h4 class="text-center pb-5">Please Please me</h4>
-                    <ol>
-                        <li>Help!!</li>
-                        <li>And I Love Her</li>
-                        <li>Please Please me</li>
-                        <li>And (Go To Him)</li>
-                        <li>Do You Want Know A Secret</li>
+                    <h4 class="text-center pb-5">Beatles for Sale</h4>
+                    <ol id="album2-songs">
+                        <!-- Las canciones se cargarán dinámicamente -->
                     </ol>
                 </div>
 
                 <div class="col-md-6 col-sm-12">
-                    <iframe style="width: 90%" height="280" src="https://youtu.be/S302kF8MJ-I?list=RDmwBdWVTR-o8"
+                    <iframe style="width: 90%" height="280" src=""
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                        allowfullscreen id="video-album2">
                     </iframe>
                 </div>
 
             </div>
         </div>
-
-
     </div>
 
     <!--fin album2-->
@@ -248,6 +245,77 @@
     </div>
 </footer>
 <!--Fin Pie de página-->
+
+<script>
+    // Cargar los datos cuando la página esté lista
+    document.addEventListener('DOMContentLoaded', function() {
+        // Cargar primer álbum (The Beatles)
+        const album1 = albums[0];
+        const album1Songs = document.getElementById('album1-songs');
+        const videoAlbum1 = document.getElementById('video-album1');
+        
+        // Establecer primer video
+        if (album1.canciones.length > 0) {
+            videoAlbum1.src = album1.canciones[0].url;
+        }
+        
+        // Crear elementos de lista para cada canción
+        album1.canciones.forEach((cancion, index) => {
+            const li = document.createElement('li');
+            li.textContent = cancion.nombre;
+            li.className = 'song-item';
+            if (index === 0) li.classList.add('active');
+            
+            li.addEventListener('click', function() {
+                // Actualizar video
+                videoAlbum1.src = cancion.url;
+                
+                // Remover clase active de todos los elementos
+                document.querySelectorAll('#album1-songs .song-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Agregar clase active al elemento clickeado
+                this.classList.add('active');
+            });
+            
+            album1Songs.appendChild(li);
+        });
+
+        // Cargar segundo álbum (Beatles for Sale)
+        const album2 = albums[1];
+        const album2Songs = document.getElementById('album2-songs');
+        const videoAlbum2 = document.getElementById('video-album2');
+        
+        // Establecer primer video
+        if (album2.canciones.length > 0) {
+            videoAlbum2.src = album2.canciones[0].url;
+        }
+        
+        // Crear elementos de lista para cada canción
+        album2.canciones.forEach((cancion, index) => {
+            const li = document.createElement('li');
+            li.textContent = cancion.nombre;
+            li.className = 'song-item';
+            if (index === 0) li.classList.add('active');
+            
+            li.addEventListener('click', function() {
+                // Actualizar video
+                videoAlbum2.src = cancion.url;
+                
+                // Remover clase active de todos los elementos
+                document.querySelectorAll('#album2-songs .song-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Agregar clase active al elemento clickeado
+                this.classList.add('active');
+            });
+            
+            album2Songs.appendChild(li);
+        });
+    });
+</script>
 
 </body>
 
